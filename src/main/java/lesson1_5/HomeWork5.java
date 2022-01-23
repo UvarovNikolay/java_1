@@ -23,13 +23,12 @@ public class HomeWork5 {
         System.out.println();
         System.out.println();
 
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i].getAge() > 40) {
-                employees[i].printInfo();
+        for (Employee employee : employees) {
+            if (employee.getAge() > 40) {
+                employee.printInfo();
                 System.out.println();
             }
         }
-
     }
 
     public static String getName (String[] name) {
