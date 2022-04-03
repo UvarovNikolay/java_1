@@ -12,7 +12,7 @@ public class Treadmill extends Barrier {
         return distance;
     }
 
-    protected boolean moving(Actions actions) {
+    public boolean moving(Actions actions) {
         System.out.println("The treadmill " + super.getName() + " distance: " + distance);
         actions.run();
         if (getDistance() <= actions.getRunDistance()) {
