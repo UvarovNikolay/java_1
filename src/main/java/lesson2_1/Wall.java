@@ -12,7 +12,7 @@ public class Wall extends Barrier{
         return height;
     }
 
-    protected boolean moving(Actions actions) {
+    public boolean moving(Actions actions) {
         System.out.println("The wall " + super.getName() + " height: " + height);
         actions.jump();
         if (getHeight() <= actions.getJumpHeight()) {

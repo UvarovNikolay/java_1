@@ -7,7 +7,7 @@ public abstract class Barrier {
         this.name = name;
     }
 
-    protected abstract boolean moving(Actions actions);
+    public abstract boolean moving(Actions actions);
 
     public String getName() {
         return name;
