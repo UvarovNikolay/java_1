@@ -37,24 +37,24 @@ public class HomeWork5 {
         System.arraycopy(array, 0, leftHalf, 0, SIZE/2);
         System.arraycopy(array, SIZE/2, rightHalf, 0, SIZE/2);
 
-        Thread Thread1 = new Thread(() -> {
+        Thread thread1 = new Thread(() -> {
             for (int i = 0; i < leftHalf.length; i++) {
                 leftHalf[i] = formula(leftHalf[i], i);
             }
         });
 
-        Thread Thread2 = new Thread(() -> {
+        Thread thread2 = new Thread(() -> {
             for (int i = 0; i < rightHalf.length; i++) {
                 rightHalf[i] = formula(rightHalf[i], i);
             }
         });
 
-        Thread1.start();
-        Thread2.start();
+        thread1.start();
+        thread2.start();
 
         try {
-            Thread1.join();
-            Thread2.join();
+            thread1.join();
+            thread2.join();
         }catch (InterruptedException e) {
             e.printStackTrace();
         }
